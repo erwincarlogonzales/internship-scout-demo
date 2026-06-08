@@ -1,0 +1,10 @@
+[project]
+name = "internship-scout"
+version = "0.1.0"
+description = "A tiny 3-agent pipeline that finds real internships matching your profile"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic",
+    "tavily-python",
+    "python-dotenv",
+]
