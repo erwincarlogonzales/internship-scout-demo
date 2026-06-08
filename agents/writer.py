@@ -16,11 +16,11 @@ def run(listings: list[dict], profile: dict) -> None:
         lines.append("No real listings found — try broadening MY_PROFILE and running again.")
 
     for listing in listings:
-        lines.append(f"## {listing['role']} — {listing['company']}")
-        lines.append(f"- **Location:** {listing['location']}")
-        lines.append(f"- **Deadline:** {listing['deadline']}")
-        lines.append(f"- **Apply here:** {listing['apply_url']}")
-        lines.append(f"- **Why it fits you:** {listing['fit_reason']}")
+        lines.append(f"## {listing.get('role', 'Not listed')} — {listing.get('company', 'Not listed')}")
+        lines.append(f"- **Location:** {listing.get('location', 'Not listed')}")
+        lines.append(f"- **Deadline:** {listing.get('deadline', 'Not listed')}")
+        lines.append(f"- **Apply here:** {listing.get('apply_url', 'Not listed')}")
+        lines.append(f"- **Why it fits you:** {listing.get('fit_reason', 'Not listed')}")
         lines.append("")
 
     OUTPUT_FILE.write_text("\n".join(lines), encoding="utf-8")

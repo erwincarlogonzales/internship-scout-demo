@@ -12,4 +12,4 @@ MY_PROFILE = {
 }
 
 OUTPUT_FILE = Path(__file__).parent / "internships.md"
-JOB_BOARD_DOMAINS = ["linkedin.com", "indeed.com", "glassdoor.com"]
+JOB_BOARD_DOMAINS = ["jobstreet.com.ph", "kalibrr.com", "linkedin.com"]

@@ -8,3 +8,12 @@ dependencies = [
     "tavily-python",
     "python-dotenv",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
